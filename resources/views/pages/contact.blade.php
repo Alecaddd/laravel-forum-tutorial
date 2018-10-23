@@ -1,2 +1,9 @@
-<h1>This is the Contact page</h1>
-@include('partials.nav')
+@extends('index')
+
+@section('content')
+    @component('partials.hero')
+        Blog Page
+    @endcomponent
+
+    @include('partials.nav')
+@endsection

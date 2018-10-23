@@ -2,7 +2,7 @@
 
 @section('content')
     @component('partials.hero')
-        Blog Page
+        Home Page
     @endcomponent
 
     @include('partials.nav')
