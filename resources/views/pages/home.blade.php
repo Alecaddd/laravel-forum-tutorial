@@ -2,10 +2,8 @@
 
 @section('content')
     @component('partials.hero')
-        {{ $page->title }}
+        Home Page
     @endcomponent
-
-    <p>{{ $page->content }}</p>
 
     @include('partials.nav')
 @endsection

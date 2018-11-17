@@ -11,7 +11,6 @@
 |
 */
 
-Route::get('/', 'FrontEndController@page')->name('home');
-Route::get('/about', 'FrontEndController@page')->name('about');
-Route::get('/contact', 'FrontEndController@page')->name('contact');
-Route::get('/blog', 'FrontEndController@page')->name('blog');
+Route::get('/', 'FrontEndController@home')->name('home');
+
+Route::get('/{slug}', 'FrontEndController@page');
