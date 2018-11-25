@@ -4,8 +4,6 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
-use App\Page;
-
 class NavigationServiceProvider extends ServiceProvider
 {
     /**
@@ -15,10 +13,10 @@ class NavigationServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        view()->composer('*', function ($view) {
-            $pages = Page::all();
-            return $view->with('pages', $pages);
-        });
+        view()->composer(
+            '*', 
+            'App\Http\ViewComposers\NavigationComposer'
+        );
     }
 
     /**
