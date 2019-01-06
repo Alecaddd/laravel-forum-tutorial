@@ -13,11 +13,8 @@ class FrontEndController extends Controller
         return view('pages.home');
     }
 
-    public function page(Request $request, $slug)
+    public function page(Page $page)
     {
-        $page = Page::whereSlug($slug)
-                    ->first();
-
         return view('pages.static', compact('page'));
     }
 }
