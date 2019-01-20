@@ -1,0 +1,1 @@
+<h1>This is a protected dashboard</h1>
